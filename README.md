@@ -1,3 +1,3 @@
 # Engineering120
 
-mud, mud glorious mud
+## Git Repo for the early part of the course.
