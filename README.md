@@ -1,3 +1,25 @@
 # Engineering120
 
-## Git Repo for the early part of the course.
+
+
+### Week 1
+
+#### Day 1
+
+
+
+
+
+Week 2
+
+Week 3
+
+Week 4
+
+Week 5
+
+Week 6
+
+Week 7
+
+Week 8
