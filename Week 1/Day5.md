@@ -23,11 +23,24 @@ Home Page -
 
 Events - Calendar (filter by month and year)
 
-## Sales
+- Presentation should be slick (Cut off deadline for production)
+- Communication between teams
+
+Give an interesting customer journey (give a narrative, make it fun)
+- Product first
+- Then user story and acceptance criteria
+-- Users don't know what they want
+
+### Reflections
+- Groups can seem reluctant to divide between tasks
+- Very easy as a developer to solutionise
+
+
+## Sales (1200-1305)
 
 Helps us to get placements in a variety of industries
 
-### Roadmap after placement (1200-)
+### Roadmap after placement
  Most engagements are for 2 years (can sign up with client after this)
  Regular touch points with and account manager
  Pastoral care from someone on the engagement team
@@ -56,3 +69,38 @@ Helps us to get placements in a variety of industries
 - None in the FAANG group
 - Wide variety of projects (e.g. Schroeder's - Data Analysts to Low-Code/No-Code Platforms, HSBC - Getting rid of Data Science in favour Data Analytics) - Common Themes (Expectations: Keen, Enthusastic, Malleable, Adaptable, Flexibly, Just Get Stuck In) - View this as a long term... should be thinking in terms the next five years. Get the perm offer, and get a promotion under your belt - Then you are set in the career and think about moving on.
 - Senior Spartan money - There is a significant increase - Build some flexibility in to Salary (Upper spectrum - 6mos with Warner Brothers, then to SMBC, 2.5 years, perm at £63k, Asset management £50k, Insurance £40-45k) Range £37.5k to £60k.
+
+
+## C# Dev 113
+Login Page
+- Security
+- Numbers to text links
+- Just tells you who your trainer is
+- Admin info is not all signposted
+- Restore from delete
+- Add a trainee
+
+CRUD functionality
+
+JSON validation
+Other API formats (YAML?)
+
+I thought .NET Core was now .NET
+
+
+- How did they manage issue around identity - authorisation - MS .Net Core Identity API
+- Crash moments or crisis moments? - High at beginning, drop, crash during crunch, high of presenting
+- Linking tests to commit and push to GitHub
+- API call for motivational quotes
+
+If they could rewrite/refactor any one feature what would you rebuild
+- What is the most unstable part of your code?
+-- The Frontend (but doesn't use - the service layer)
+-- Made Service layer to test 
+-- LINQ
+-> Check routing
+-> REST Assured
+
+Did you put IDs on your web-element
+- Nice clear README.md
+- Error state simulation
