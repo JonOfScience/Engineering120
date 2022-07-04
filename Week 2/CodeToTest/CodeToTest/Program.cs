@@ -16,7 +16,7 @@ public class Program
         string result;
         if (ageOfViewer < 12)
         {
-            result = "U, PG & 12A (Cinema) films are available.";
+            result = "U, PG & 12A films are available.";
         }
         else if (ageOfViewer < 15)
         {
