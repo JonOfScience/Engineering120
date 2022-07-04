@@ -29,7 +29,6 @@ Events - Calendar (filter by month and year)
 Give an interesting customer journey (give a narrative, make it fun)
 - Product first
 - Then user story and acceptance criteria
--- Users don't know what they want
 
 ### Reflections
 - Groups can seem reluctant to divide between tasks
@@ -101,6 +100,6 @@ If they could rewrite/refactor any one feature what would you rebuild
 -> Check routing
 -> REST Assured
 
-Did you put IDs on your web-element
+Did you put IDs on your web-element?
 - Nice clear README.md
 - Error state simulation
