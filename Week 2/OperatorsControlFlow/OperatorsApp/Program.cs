@@ -62,6 +62,51 @@
             #region Selection
 
             #endregion
+
+            #region switch
+            Console.WriteLine(Priority(1));
+            #endregion
+
+        }
+
+        public static string DrivingLaws(int age)
+        {
+            string law = "";
+            switch (age)
+            {
+                case < 18:
+                    law = "Cannot legally drive.";
+                    break;
+                case < 23:
+                    law = "Can legally drive but cannot hire a car.";
+                    break;
+                default:
+                    law = "Can legally drive and rent a car";
+                    break;
+            }
+            return law;
+        }
+
+        public static string Priority(int level)
+        {
+            string priority = "Code ";
+            switch (level)
+            {
+                case 3:
+                    priority = priority + "Red";
+                    break;
+                case 2:
+                case 1:
+                    priority = priority + "Amber";
+                    break;
+                case 0:
+                    priority = priority + "Green";
+                    break;
+                default:
+                    priority = "Error";
+                    break;
+            }
+            return priority;
         }
 
         public static bool JumpOutOfPlane()
