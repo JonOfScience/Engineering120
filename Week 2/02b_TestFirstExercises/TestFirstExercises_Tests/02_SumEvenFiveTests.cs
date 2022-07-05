@@ -6,7 +6,7 @@ namespace TestFirstExercises_Tests
 {
     class SumEvenFiveTests
     {
-        // Add test for negatives
+        // Add test for negatives?
         [TestCase(0, 0)]
         [TestCase(1, 0)]
         [TestCase(9, 25)]
