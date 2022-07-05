@@ -5,6 +5,10 @@ namespace TestFirstExercises_Tests
 {
     public class OperatorTests
     {
+        // Test 0's
+        [TestCase(0, 0, true)]
+        // Test negatives
+        [TestCase(-1, -5, true)]
         [TestCase(5, 2, true)]
         [TestCase(2, 5, false)]
         [TestCase(5, 5, true)]
@@ -13,6 +17,8 @@ namespace TestFirstExercises_Tests
             Assert.That(Methods.GreaterEqual(x, y), Is.EqualTo(expResult));
         }
 
+        // -1 due to squaring leading to positive result
+        [TestCase(-1, 10.571)]
         [TestCase(0, 10.429)]
         [TestCase(10, 24.714)]
         public void GivenNumber_BODMAS_ReturnsTheExpectedResult(int num, double expResult)

@@ -6,6 +6,7 @@ namespace TestFirstExercises_Tests
 {
     public class SumListTests
     {
+        // Test positives and negatives
         [Test]
         public void GivenAList_SumList_ReturnsItsSum()
         {
