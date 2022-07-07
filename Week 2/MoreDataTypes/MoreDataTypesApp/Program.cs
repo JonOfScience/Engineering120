@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 
 namespace MoreDataTypesApp
 {
@@ -46,7 +47,87 @@ namespace MoreDataTypesApp
             #endregion
 
             #region String parsing
-            ParsingStrings();
+            //ParsingStrings();
+            #endregion
+
+            #region Arrays
+            //// 1D Arrays
+            //int[] arrayOfInts = new int[10];
+            //arrayOfInts[4] = 6;
+
+            //int[] anotherArrayOfInts = { 1, 2, 3, 4, 5 };
+            //string sparta = "SpartaGlobal";
+            //var spartaArray = sparta.ToCharArray();
+
+            //var anotherSparta = "Hello,Hi,Hola,Hallo,Hej";
+            //var annotherArray = anotherSparta.Split(','); // Takes a regex expression for separator
+
+            //// 2D Arrays
+            //int[,] grid = new int[2, 4];
+            //grid[0, 1] = 6;
+            //grid[1, 3] = 8;
+
+            //foreach (var element in grid)
+            //{
+            //    Console.WriteLine(element);
+            //}
+
+            //string[,] chessboard = {
+            //    { "pawn", "king" }, 
+            //    { "blank", "blank" }, 
+            //    { "enemy king", "enemy pawn" }
+            //};
+            //int lower1D = chessboard.GetLowerBound(0);
+            //int lower2D = chessboard.GetLowerBound(1);
+            //int upper1D = chessboard.GetUpperBound(0);
+            //int upper2D = chessboard.GetUpperBound(1);
+            //string theBoard = "";
+            //for (int i = lower1D; i <= upper1D + 1; i++)
+            //{
+            //    for (int j = lower2D; i <= upper2D + 1; i++)
+            //    {
+            //        theBoard += $"{chessboard[i, j]} is at {i} and {j}\n";
+            //    }
+            //}
+            //Console.WriteLine(theBoard);
+
+            //// Jagged Arrays
+            //int[][] jaggedIntArray = new int[2][];
+            //jaggedIntArray[0] = new int[4];
+            //jaggedIntArray[1] = new int[2];
+
+            //jaggedIntArray[0][3] = 666;
+
+            //jaggedIntArray[0] = new int[] { 1, 2, 3, 4 };
+
+            //foreach (int[] innerArray in jaggedIntArray)
+            //{
+            //    foreach (int element in innerArray)
+            //    {
+            //        Console.WriteLine(element);
+            //    }
+            //}
+            #endregion
+
+            #region DateTime
+            //var now = DateTime.Now;
+            //Console.WriteLine(now);
+            //var tomorrow = now.AddDays(1);
+            //Console.WriteLine(tomorrow);
+
+            var nishBDay = new DateOnly(1989, 11, 2);
+
+            var now2 = DateOnly.FromDateTime(DateTime.Now);
+
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            int total = 0;
+            for (int i = 0; i < int.MaxValue; i++)
+            {
+                total += i;
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.Elapsed);
             #endregion
         }
 
