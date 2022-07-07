@@ -6,14 +6,12 @@ namespace DataTypes_Lib
     {
         public static short UIntToShort(uint num)
         {
-            if (num > short.MaxValue)
-                throw new OverflowException();
-            return (short)num;
+            return Convert.ToInt16(num);
         }
 
         public static long FloatToLong(float num)
         {
-            return (long)Math.Round(num);
+            return Convert.ToInt64(num);
         }
     }
 }
