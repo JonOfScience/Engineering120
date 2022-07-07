@@ -104,5 +104,8 @@ Checkboxes
 - [x] Run `IntegerCalc` tests to identify passes & fails [All fails - Non implemented]
 - [x] Implement `IntegerCalc.Add` [+, for high: check if either num1 or num2 are Int.MaxValue and the other is positive and mirror for low]
 - [x] Tests for `IntegerCalc.Add` pass
+- [x] Implement `IntegerCalc.Subtract` [-, mirrored checks to `IntegerCalc.Add`]
+- [x] Tests for `IntegerCalc.Subtract` pass
+- [x] Implement `IntegerCalc.Multiply` [Has no tests?]
 - [ ] 
 
