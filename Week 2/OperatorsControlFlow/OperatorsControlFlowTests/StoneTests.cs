@@ -16,6 +16,7 @@ namespace OperatorsControlFlowTests
         }
 
         [TestCase(-1)]
+        [TestCase(-101)]
         public void GivenNegativePounds_GetStones_Throws(int totalPounds)
         {
             Assert.That(() => Methods.GetStones(totalPounds), Throws.TypeOf<ArgumentOutOfRangeException>());
@@ -34,6 +35,7 @@ namespace OperatorsControlFlowTests
         }
 
         [TestCase(-1)]
+        [TestCase(-101)]
         public void GivenNegativePounds_GetPounds_Throws(int totalPounds)
         {
             Assert.That(() => Methods.GetPounds(totalPounds), Throws.TypeOf<ArgumentOutOfRangeException>());

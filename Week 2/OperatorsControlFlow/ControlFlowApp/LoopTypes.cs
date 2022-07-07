@@ -9,12 +9,7 @@
 
             int highest = int.MinValue;
             foreach (int value in nums)
-            {
-                if (value > highest)
-                {
-                    highest = value;
-                }
-            }
+                highest = value > highest ? value : highest;
             return highest;
         }
 
@@ -25,8 +20,7 @@
 
             int lowest = int.MaxValue;
             foreach (int value in nums)
-                if (value < lowest)
-                    lowest = value;
+                lowest = value < lowest ? value : lowest;
             return lowest;
         }
 
@@ -38,8 +32,8 @@
             int highest = int.MinValue;
             for (int i = 0; i < nums.Count; i++)
             {
-                if (nums[i] > highest)
-                    highest = nums[i];
+                highest = nums[i] > highest ? nums[i] : highest;
+                i++;
             }
             return highest;
         }
@@ -53,8 +47,7 @@
             int i = 0;
             while (i < nums.Count)
             {
-                if (nums[i] > highest)
-                    highest = nums[i];
+                highest = nums[i] > highest ? nums[i] : highest;
                 i++;
             }
             return highest;
@@ -69,8 +62,7 @@
             int i = 0;
             do
             {
-                if (nums[i] > highest)
-                    highest = nums[i];
+                highest = nums[i] > highest ? nums[i] : highest;
                 i++;
             } while (i < nums.Count);
             return highest;

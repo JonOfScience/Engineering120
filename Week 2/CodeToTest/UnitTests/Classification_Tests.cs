@@ -61,5 +61,11 @@ namespace UnitTests
             Assert.That(Program.AvailableClassifications(age), Is.EqualTo(expectedResult));
         }
 
+        [TestCase(-1)]
+        [TestCase(-101)]
+        public void GivenAnBelow0_AvailableClassifications_ThrowsAnArgumentOutOfRangeException(int age)
+        {
+            Assert.That(() => Program.AvailableClassifications(age), Throws.TypeOf<ArgumentOutOfRangeException>());
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace OperatorsControlFlowTests
         [TestFixture]
         public class HighestValues : LoopTests
         {
+            // Tests with one element array
             [Test]
             public void GivenEmptyList_HighestForEachLoop_Throws()
             {
