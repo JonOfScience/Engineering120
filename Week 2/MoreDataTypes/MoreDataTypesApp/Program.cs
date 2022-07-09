@@ -3,6 +3,10 @@ using System.Text;
 
 namespace MoreDataTypesApp
 {
+    public enum PokemonType
+    {
+        GRASS, FIRE, ELEC, WATER
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -17,33 +21,33 @@ namespace MoreDataTypesApp
             //string newnew = String.Concat(lines);
             //Console.WriteLine(newnew);
 
-            Console.WriteLine(StringExercise(" C# list fundamentals "));
+            //Console.WriteLine(StringExercise(" C# list fundamentals "));
             #endregion
 
             #region StringBuilder
-            Console.WriteLine(StringBuilderExercise(" C# list fundamentals "));
+            // Console.WriteLine(StringBuilderExercise(" C# list fundamentals "));
             #endregion
 
             #region String Interpolation
-            string a = "A";
-            string b = "B";
-            string aAndB = a + b;
-            Console.WriteLine(aAndB);
-            aAndB = String.Concat(a, b);
-            Console.WriteLine(aAndB);
-            string[] arrayOfStrings = { "hello", "world" };
-            Console.WriteLine(String.Concat(arrayOfStrings));
-            char[] arrayOfChars = { 'a', 'b', 'c' };
-            Console.WriteLine(String.Concat(arrayOfChars));
-            Console.WriteLine("Your blood type is " + a + b + ".");
-            Console.WriteLine($"Your blood type is {a}{b.ToLower()}.");
+            //string a = "A";
+            //string b = "B";
+            //string aAndB = a + b;
+            //Console.WriteLine(aAndB);
+            //aAndB = String.Concat(a, b);
+            //Console.WriteLine(aAndB);
+            //string[] arrayOfStrings = { "hello", "world" };
+            //Console.WriteLine(String.Concat(arrayOfStrings));
+            //char[] arrayOfChars = { 'a', 'b', 'c' };
+            //Console.WriteLine(String.Concat(arrayOfChars));
+            //Console.WriteLine("Your blood type is " + a + b + ".");
+            //Console.WriteLine($"Your blood type is {a}{b.ToLower()}.");
 
-            int num1 = 2;
-            int num2 = 7;
-            string logOfNum1Num2 = $"The log to base {num1} of {num2} is {Math.Log(num2, num1):N3}";
-            Console.WriteLine(logOfNum1Num2);
-            string money = $"The change is {(num2 - num1):C}";
-            Console.WriteLine(money);
+            //int num1 = 2;
+            //int num2 = 7;
+            //string logOfNum1Num2 = $"The log to base {num1} of {num2} is {Math.Log(num2, num1):N3}";
+            //Console.WriteLine(logOfNum1Num2);
+            //string money = $"The change is {(num2 - num1):C}";
+            //Console.WriteLine(money);
             #endregion
 
             #region String parsing
@@ -110,24 +114,55 @@ namespace MoreDataTypesApp
             #endregion
 
             #region DateTime
-            //var now = DateTime.Now;
-            //Console.WriteLine(now);
-            //var tomorrow = now.AddDays(1);
-            //Console.WriteLine(tomorrow);
+            ////var now = DateTime.Now;
+            ////Console.WriteLine(now);
+            ////var tomorrow = now.AddDays(1);
+            ////Console.WriteLine(tomorrow);
 
-            var nishBDay = new DateOnly(1989, 11, 2);
+            //var nishBDay = new DateOnly(1989, 11, 2);
 
-            var now2 = DateOnly.FromDateTime(DateTime.Now);
+            //var now2 = DateOnly.FromDateTime(DateTime.Now);
 
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
-            int total = 0;
-            for (int i = 0; i < int.MaxValue; i++)
+            //var stopwatch = new Stopwatch();
+            //stopwatch.Start();
+            //int total = 0;
+            //for (int i = 0; i < int.MaxValue; i++)
+            //{
+            //    total += i;
+            //}
+            //stopwatch.Stop();
+            //Console.WriteLine(stopwatch.Elapsed);
+            #endregion
+
+            #region Enums
+
+            PokemonType type = PokemonType.FIRE;
+            if (type == PokemonType.WATER) Console.WriteLine("Water is the type.");
+            else if (type == PokemonType.FIRE) Console.WriteLine("Fire is the type.");
+
+            switch (type)
             {
-                total += i;
+                case PokemonType.ELEC:
+                    Console.WriteLine("Bzzt!");
+                    break;
+                case PokemonType.GRASS:
+                    Console.WriteLine("The worst type.");
+                    break;
+                case PokemonType.FIRE:
+                    Console.WriteLine($"Beats {PokemonType.GRASS}");
+                    break;
+                default:
+                    Console.WriteLine("No type found :(");
+                    break;
             }
-            stopwatch.Stop();
-            Console.WriteLine(stopwatch.Elapsed);
+            var poke = (int)PokemonType.GRASS;
+            var poke2 = (PokemonType)3;
+            Console.WriteLine(poke);
+            Console.WriteLine(poke2);
+
+            var anotherType = Enum.Parse(typeof(PokemonType), "WATER");
+            Console.WriteLine(anotherType);
+
             #endregion
         }
 
