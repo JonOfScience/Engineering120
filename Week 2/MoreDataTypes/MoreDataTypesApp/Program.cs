@@ -136,34 +136,35 @@ namespace MoreDataTypesApp
 
             #region Enums
 
-            PokemonType type = PokemonType.FIRE;
-            if (type == PokemonType.WATER) Console.WriteLine("Water is the type.");
-            else if (type == PokemonType.FIRE) Console.WriteLine("Fire is the type.");
+            //PokemonType type = PokemonType.FIRE;
+            //if (type == PokemonType.WATER) Console.WriteLine("Water is the type.");
+            //else if (type == PokemonType.FIRE) Console.WriteLine("Fire is the type.");
 
-            switch (type)
-            {
-                case PokemonType.ELEC:
-                    Console.WriteLine("Bzzt!");
-                    break;
-                case PokemonType.GRASS:
-                    Console.WriteLine("The worst type.");
-                    break;
-                case PokemonType.FIRE:
-                    Console.WriteLine($"Beats {PokemonType.GRASS}");
-                    break;
-                default:
-                    Console.WriteLine("No type found :(");
-                    break;
-            }
-            var poke = (int)PokemonType.GRASS;
-            var poke2 = (PokemonType)3;
-            Console.WriteLine(poke);
-            Console.WriteLine(poke2);
+            //switch (type)
+            //{
+            //    case PokemonType.ELEC:
+            //        Console.WriteLine("Bzzt!");
+            //        break;
+            //    case PokemonType.GRASS:
+            //        Console.WriteLine("The worst type.");
+            //        break;
+            //    case PokemonType.FIRE:
+            //        Console.WriteLine($"Beats {PokemonType.GRASS}");
+            //        break;
+            //    default:
+            //        Console.WriteLine("No type found :(");
+            //        break;
+            //}
+            //var poke = (int)PokemonType.GRASS;
+            //var poke2 = (PokemonType)3;
+            //Console.WriteLine(poke);
+            //Console.WriteLine(poke2);
 
-            var anotherType = Enum.Parse(typeof(PokemonType), "WATER");
-            Console.WriteLine(anotherType);
+            //var anotherType = Enum.Parse(typeof(PokemonType), "WATER");
+            //Console.WriteLine(anotherType);
 
             #endregion
+
         }
 
         public static void ParsingStrings()
