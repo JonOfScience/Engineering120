@@ -85,10 +85,21 @@ Can show full signatures by going to **Class Diagram** in the toolbar, **Change 
  - Base constructor finishes and then runs the body of the derived constructor
 
  ```mermaid
- graph TD
- HunterConstructorInit --> BaseConstructorInit;
- BaseConstructorInit --> BaseConstructorRun;
- BaseConstructorRun --> HunterConstructorRun;
+ sequenceDiagram
+    participant Derived
+    participant Base
+    activate Derived
+    Note left of Derived: Derived Constructor called
+    Derived ->> Base: Base Constructor called 
+    deactivate Derived
+    activate Base
+    Note right of Base: Base Constructor body executes
+    Base ->> Derived: base body finishes
+    deactivate Base
+    activate Derived
+    Note left of Derived: Derived Constructor body executes
+    deactivate Derived
+    Note left of Derived: Constructed object returned
  ```
 - If we want a parameterless constructor in a derived class we must also have one in the base class.
 - Can call parameterless IF we refer to the base constructor in the call `Hunter () base {"", ""}`
