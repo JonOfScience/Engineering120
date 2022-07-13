@@ -76,9 +76,14 @@ Can show full signatures by going to **Class Diagram** in the toolbar, **Change 
 
 ## Inheritance
  
- - Facilitates DRY
- - "is-a" relationship (inheritee is-a type of inheritor)
- - Cannot access private member variables from an inheritee
+For example, when the `Hunter` derived class inherits from the `Person` base class:
+```csharp
+public class Hunter : Person
+```
+
+ - Inheritance facilitates DRY
+ - represents an "is-a" relationship (derived class is-a type of the base class)
+ - Cannot access private member variables on the base class from an derived class
  - Can access public properties
  - Can set private member variables by calling the `base` constructor
  - Derived constructor calls base constructor

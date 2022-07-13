@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SafariParkApp;
 
-internal class Hunter : Person
+public class Hunter : Person
 {
     private string _camera;
     public Hunter(string fName, string lName, string camera = " ") : base (fName, lName)
