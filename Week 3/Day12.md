@@ -4,14 +4,20 @@
 
 ## Classes
 
-High cohesion, loose coupling
+Encourages high cohesion, and loose coupling.
+- Related functionality lives together (high cohesion).
+- But a class should only have one reason to change (loose coupling).
 
-Related functionality lives together.
-But a class should only have one reason to change.
-
-UML Class diagram 
+### UML Class diagram 
 - Representing classes and the relationships between them
 - Different levels of detail
+
+```mermaid
+classDiagram
+class ClassName
+ClassName : int aVariable
+ClassName : AMethod(anArgument) returnType
+```
 
 Add to project - Class Diagram
 - Drag `.cs` files from **Solution Explorer** into the diagram.
@@ -66,7 +72,7 @@ Can show full signatures by going to **Class Diagram** in the toolbar, **Change 
 - A struct represents one thing (e.g. a single Date and Time)
 - `int` is an alias for the struct `Int32`.
 - Structs aren't reference types, they are value types
-- Structs can't inherit from other structs
+- Structs can't inherit (from other structs)
 - Can instantiate structs without necessarily calling constructors (i.e. no need to use `new`)
 - Structs are VALUE types, not REFERENCE types.
 
@@ -86,6 +92,9 @@ public class Hunter : Person
  - Cannot access private member variables on the base class from an derived class
  - Can access public properties
  - Can set private member variables by calling the `base` constructor
+ ```csharp
+ public Hunter(string fName, string lName, string camera = " ") : base (fName, lName)
+ ```
  - Derived constructor calls base constructor
  - Base constructor finishes and then runs the body of the derived constructor
 
@@ -94,15 +103,15 @@ public class Hunter : Person
     participant Derived
     participant Base
     activate Derived
-    Note left of Derived: Derived Constructor called
-    Derived ->> Base: Base Constructor called 
+    Note left of Derived: Derived constructor called
+    Derived ->> Base: Base constructor called 
     deactivate Derived
     activate Base
-    Note right of Base: Base Constructor body executes
+    Note right of Base: Base constructor body executes
     Base ->> Derived: base body finishes
     deactivate Base
     activate Derived
-    Note left of Derived: Derived Constructor body executes
+    Note left of Derived: Derived constructor body executes
     deactivate Derived
     Note left of Derived: Constructed object returned
  ```
@@ -111,5 +120,5 @@ public class Hunter : Person
 
 ## Glossary
 *Method Overloading* - Same signature but with different numbers of parameters
-*Object Initialization* - 
+*Object Initialization* - Specify internal variables by using `{ }` after the constructor call
 *Classic Model* vs *Constraint Model* of testing
