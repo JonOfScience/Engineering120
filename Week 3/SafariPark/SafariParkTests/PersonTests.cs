@@ -1,4 +1,5 @@
 using SafariParkApp;
+using SafariParkApp.Misc;
 
 namespace SafariParkTests;
 

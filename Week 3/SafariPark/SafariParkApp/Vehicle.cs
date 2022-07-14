@@ -1,8 +1,8 @@
 ﻿namespace SafariParkApp;
 
-public class Vehicle
+public class Vehicle : IMovable
 {
-    private int _capacity;
+    protected int _capacity;
     private int _numPassengers;
 
     public int NumPassengers
@@ -26,13 +26,13 @@ public class Vehicle
         Speed = speed;        
     }
 
-    public string Move()
+    public virtual string Move()
     {
         Position += Speed;
         return "Moving along";
     }
 
-    public string Move(int times)
+    public virtual string Move(int times)
     {
         if (times < 0) throw new ArgumentOutOfRangeException();
         Position += (times * Speed);

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SafariParkApp
+﻿namespace SafariParkApp
 {
-    public class Person
+    public class Person : IMovable
     {
         // private readonly string _hairColour;
         public string FirstName { get; set; }
@@ -36,5 +30,20 @@ namespace SafariParkApp
         }
 
         public string FullName => $"{FirstName} {LastName}";
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} Name: {FullName} Age: {Age}";
+        }
+
+        public string Move()
+        {
+            return "Walking along";
+        }
+
+        public string Move(int times)
+        {
+            return $"Walking along {times} times";
+        }
     }
 }

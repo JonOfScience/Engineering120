@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SafariParkApp;
 
-public class Hunter : Person
+public /*sealed*/ class Hunter : Person
 {
     private string _camera;
     public Hunter(string fName, string lName, string camera = " ") : base (fName, lName)
@@ -17,5 +17,24 @@ public class Hunter : Person
     public string Shoot()
     {
         return $"{FullName} has taken a photo with their {_camera}";
+    }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()} Camera {_camera}";
+    }
+}
+
+public class MonsterHunter : Hunter
+{
+    private string? _weapon;
+
+    public MonsterHunter(string fName, string lName, string camera, string weapon) : base (fName, lName, camera)
+    {
+        _weapon = weapon;
+    }
+    public override string ToString()
+    {
+        return $"{base.ToString()} Weapon : {_weapon}";
     }
 }

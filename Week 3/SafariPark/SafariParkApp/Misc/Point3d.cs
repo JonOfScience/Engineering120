@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SafariParkApp
+namespace SafariParkApp.Misc
 {
     public struct Point3d
     {
