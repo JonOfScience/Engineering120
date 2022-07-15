@@ -90,6 +90,7 @@ namespace SafariParkApp
             //}
             // SpartaWrite(ellis);
 
+            /* HOMEWORK
             var bob = new Person("Bob", "Fleming") { Age = 67 };
             var chris = new Person("Chris", "Jackson") { Age = 24 };
             var bike = new Vehicle(1, 12);
@@ -102,6 +103,32 @@ namespace SafariParkApp
             {
                 Console.WriteLine(moveable.Move());
             }
+            */
+
+            /* LISTS
+            List<Person> peopleList = new List<Person>() { new Person("Nish", "Mandal") { Age = 32 } };
+            var kai = new Person("Kai", "Chan");
+            var tom = new Person("Tom", "W");
+
+            peopleList.Add(tom);
+
+            var newerList = new List<Person>();
+            newerList.AddRange(peopleList);
+            newerList.Add(kai);
+
+            peopleList.ForEach(x => Console.WriteLine(x));
+            Console.WriteLine();
+            newerList.ForEach(x => Console.WriteLine(x));
+            */
+
+            List<int> list = new List<int>() { 5, 4, 3, 9, 0 };
+            list.Add(8);
+            list.Sort();
+            list.RemoveRange(1, 2);
+            list.Insert(2, 1);
+            list.Reverse();
+            list.Remove(9);
+            Console.WriteLine("({0})" , string.Join(", ", list));
         }
 
         public static void SpartaWrite(Object obj)
