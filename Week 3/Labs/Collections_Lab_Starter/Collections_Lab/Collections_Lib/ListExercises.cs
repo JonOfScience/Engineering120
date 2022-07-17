@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Collections_Lib
@@ -9,17 +10,21 @@ namespace Collections_Lib
         // that are multiples of 5
         public static List<int> MakeFiveList(int max)
         {
-            List<int> fives = new List<int>();
-            for (int i = 1; i <= max / 5; i++) fives.Add(i * 5);
-            return fives;
+            //List<int> fives = new List<int>();
+            //for (int i = 1; i <= max / 5; i++) fives.Add(i * 5);
+            //return fives;
+
+            return Enumerable.Range(1, max).Where(x => x % 5 == 0).ToList(); 
         }
 
         // returns a list of all the strings in sourceList that start with the letter 'A' or 'a'
         public static List<string> MakeAList(List<string> sourceList)
         {
-            List<string> list = new List<string>();
-            foreach (string src in sourceList) if (src.ToLower()[0] == 'a') list.Add(src);
-            return list;
+            //List<string> list = new List<string>();
+            //foreach (string src in sourceList) if (src.ToLower()[0] == 'a') list.Add(src);
+            //return list;
+
+            return sourceList.Where(x => x.ToLower()[0] == 'a').ToList();
         }
     }
 }
