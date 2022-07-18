@@ -1,5 +1,7 @@
 # Day 10 - 08/07/2022
 
+[TOC]
+
 ## Session 1 - Enums
 
 [Look into: Executing in interactive mode]
@@ -18,11 +20,11 @@ People generally use CAPITALS to name enums.
 
 ## Session 2 - @1200 - Methods 
 
-Method signature
+### Method signature
 
 ![C# | Methods - Tutorialspoint.dev](https://tutorialspoint.dev/image/methods-in-java.png)
 
-Access modifier - visibility
+### Access modifier - visibility
 
 - public - anything in the <u>namespace</u>
 - private - access it within that <u>class</u>

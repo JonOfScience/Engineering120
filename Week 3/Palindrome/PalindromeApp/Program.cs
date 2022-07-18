@@ -8,14 +8,12 @@ namespace PalindromeApp
         {
         }
 
-        public static bool IsPalindrome(string stringToCheck)
+        public static bool VerifyPalindrome(string stringToCheck)
         {
             if (stringToCheck.Length == 0) throw new ArgumentException();
             if (stringToCheck.Length == 1) return true;
 
-            StringBuilder cleanedString = new StringBuilder();
-            foreach (char element in stringToCheck.ToLower())
-                if (element >= 97 && element <= 122) cleanedString.Append(element);
+            StringBuilder cleanedString = CleanAndCaseString(stringToCheck);
 
             if (cleanedString.Length % 2 != 0) cleanedString.Remove( cleanedString.Length / 2 , 1);
 
@@ -28,5 +26,14 @@ namespace PalindromeApp
 
             return true;
         }
+
+        public static StringBuilder CleanAndCaseString(string stringToClean)
+        {
+            StringBuilder cleanedString = new StringBuilder();
+            foreach (char element in stringToClean.ToLower())
+                if (element >= 97 && element <= 122) cleanedString.Append(element);
+            return cleanedString;
+        }
+
     }
 }

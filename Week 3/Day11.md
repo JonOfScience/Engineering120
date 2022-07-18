@@ -1,26 +1,24 @@
 
 #Day 11 - 11/07/2022
 
+[TOC]
+
 ## OOP Videos
 
-### Procedural Programming (Code in one place that operated on date stored somewhere else)
+### Procedural Programming (Code in one place that operated on data stored somewhere else)
 
+Issues
 - Data separated from functions
-
 - Lack of modularity
-
 - High coupling
-
 - Re-use difficult
-
 - Not modelling the real world - The real world doesn't have data separated from behaviour
 
-  
 
-### OOP
+### OOP (Object Orientated Programming)
 
-- Combine data elements with operations on that data
-- Data and functions are combined
+Advantages
+- Combine data elements with operations on that data (data and functions are combined)
 - Better modularity - everything is self contained
 - Low coupling
 - Re-use easier
@@ -32,7 +30,7 @@
 - Inheritance
 - Polymorphism
 
-#### Abstraction
+##### Abstraction
 
 When we describe something in an abstract way (e.g. "I have a car") we have a shared understand of what the elements are.
 
@@ -58,7 +56,7 @@ A class is comprised of:
 To use a class
 -> Create an instance (and provide the values for it)
 
-##### Coding Example
+###### Coding Example
 
 Constructor method ->
 ```csharp
@@ -69,7 +67,7 @@ public NameOfClass ()
 - Add parameters to the constructor to allow passing in values to the class
 - Define methods on the function
 
-#### Encapsulation
+##### Encapsulation
 
 Not how does it work, but how do I work it?
 
@@ -91,14 +89,14 @@ Not how does it work, but how do I work it?
 - But can encapsulate as a property instead
 - Properties have PascalCase
 
-#### Inheritance
+##### Inheritance
 
 Hierarchies of relationships between objects
 e.g. vehicle (Superclass) -> Car, Bus (Subclasses),  Car (Superclass)-> Luxury Car (Subclasses)
 - Base class - Superclass
 - Derived class - Subclasses
 
-##### Coding Example
+###### Coding Example
 
 Inherit using - Subclass : Superclass
 
@@ -112,7 +110,7 @@ Power of subclasses is their ability to specialise
 - Fields in subclasses can be assigned after reference to superclass for constructor
 - Can call methods on base class in subclass methods
 
-#### Polymorphism
+##### Polymorphism
 
 Get a message, do something
 

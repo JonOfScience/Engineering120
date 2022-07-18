@@ -1,4 +1,6 @@
-﻿# Introduction to C# in Visual Studio
+﻿# Day 4 - Introduction to C# in Visual Studio
+
+[TOC]
 
 Viewing compiled code go to `Debug>>net6.0`
 

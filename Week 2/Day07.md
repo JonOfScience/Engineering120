@@ -1,6 +1,6 @@
 # Day 7 - 05/07/2022 - C#
 
-
+[TOC]
 
 ## Stand Up
 
@@ -13,6 +13,8 @@ Look into:
 
 ## Session 1
 
+### Increment/Decrement Operators
+
 ```a=x++``` 	assign x to a <u>then</u> increment x.
 
 ```b++x```		increment x <u>then</u> assign to b.
@@ -23,7 +25,7 @@ Prefix vs. suffix only comes into play if it is being assigned.
 
 
 
-Integer division
+### Integer division
 
 ```var a = 5 / 2 ``` 		-> 	```2```
 
@@ -32,7 +34,7 @@ Integer division
 If either argument is a ```double``` then the result will be inferred to also be a double by ```var```.
 
 
-
+### Segmenting code
 ```csharp
 #region
     <code>
@@ -42,8 +44,7 @@ If either argument is a ```double``` then the result will be inferred to also be
 Allows us to section off related areas of code.
 
 
-
-APPROACH: Rest a cycling count
+### APPROACH: Reset a cycling count
 
 ```csharp
 x = ++x % (max_value)
@@ -52,7 +53,7 @@ x = ++x % (max_value)
 So when ```x``` -> ```max_value``` then ```x % max_value = 0``` therefore ```x``` resets.
 
 
-
+### Good-Practice - Function design and readable code
 Split up functions to make your intention clear
 
 - To make your code readable
@@ -62,15 +63,17 @@ Split up functions to make your intention clear
 Operators: ```+=``` , ```-=``` , ```/=``` (?) , ```%=```, ```*=```
 
 
-
+### Accessibility Modifier
 ``internal`` means that it is accessible within a project (an assembly)
 
 
 
 ## Session 2
 
+### Good-Practice - Class division between files
 Best convention is that there is one class file (```.cs```) per class.
 
+### Logical Operators
 
 
 ```&&```	-> 	short circuit conditions
@@ -95,7 +98,7 @@ Ternary chains
 
 
 
-## Session 3
+## Session 3 - Selection (`switch` vs. `if`)
 
 Switch in debug mode 	-> Handled like ifs
 
@@ -138,6 +141,9 @@ HWK: Create a method for each type of loop which returns the highest number in a
 
 [nums[0]] if nums is an empty list
 
+
+## Homework Assignment
+
 => Lowest in each list
 
 => Refactor methods so far
@@ -147,6 +153,3 @@ HWK: Create a method for each type of loop which returns the highest number in a
 => TFE (Test First Exercises)
 
 => Coding websites (Advent of Code)
-
-
-

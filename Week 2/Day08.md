@@ -1,10 +1,8 @@
-
-
-
-
 # Day 8 - 06/07/2022
 
 "*Try to concentrate on the here and now.*" - Nish
+
+[TOC]
 
 ## Stand up
 

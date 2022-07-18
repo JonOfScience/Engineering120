@@ -1,6 +1,6 @@
 # Day 9 - 07/07/2022 - Collections and Data Types
 
-
+[TOC]
 
 ## Session 1 - Strings
 

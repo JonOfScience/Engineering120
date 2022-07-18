@@ -1,17 +1,18 @@
 # Day 6 - 04/07/2022 - C#
 
-= Stand Up =
+[TOC]
+
+## Stand Up
 
 "definition of done" can be applied at different levels
-
 - Product
 - Sprint
 
-Can include running out of money or hitting the product deadline.
+Note: Can include running out of money or hitting the product deadline.
 
 
 
-= Session 1 =
+## Session 1
 
 Single responsibility principle
 
@@ -29,29 +30,21 @@ DAMP code:
 - Phrases
 
 
-
-Remember breakpoints
-
+Remember breakpoints when debugging - Can follow the flow of the program and evolution of variables.
 
 
 var - for shorthand. Don't break type safety
-
--  For collections
+- For collections
 - Or if you don't know the result type
 
 
-
-Private - within class
-
-Static - This method belongs to the class, not to instances of the class
-
-
+### Access modifiers
+- `private` - within class
+- `static` - This method belongs to the class, not to instances of the class
 
 =
 
-
-
-NUnit
+### NUnit
 
 - R-click solution
 - Add (Explore dependencies)
@@ -65,17 +58,14 @@ Constraint model of assertion
 
 
 
-= Session 2 = 
+## Session 2
 
-F - Fast
-
-I - Independent (of other tests)
-
-R - Repeatable (as is, for other people)
-
-S - Self-validating (no second checks needed)
-
-T - Timely
+Tests should be:
+- F - Fast
+- I - Independent (of other tests)
+- R - Repeatable (as is, for other people)
+- S - Self-validating (no second checks needed)
+- T - Timely
 
 
 
@@ -83,9 +73,7 @@ Minimum # of tests - Dependent on ranges/Boundaries/Conditions
 
 
 
-*Exhaustive testing is impossible*
-
-(ISTQB Principle)
+*Exhaustive testing is impossible* - (ISTQB Principle)
 
 
 
@@ -99,7 +87,7 @@ Partitioning and Boundary Value Analysis
 
 
 
-= Session 3 =
+## Session 3
 
 Parameterised test
 

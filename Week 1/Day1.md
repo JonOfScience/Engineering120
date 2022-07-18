@@ -1,5 +1,7 @@
 # Day 1 - 27/06/2022
 
+[TOC]
+
 "Stand-ups"
 - A short update meeting ( -> yesterday, today, and blockers)
 - Quick-fire questions from yesterday's material.

@@ -1,5 +1,7 @@
 # Day 5 - 01/07/2022 - Agile Project, Sales, C# Dev Presentation
 
+[TOC]
+
 ## Agile Project
 
 ### Requirements

@@ -46,7 +46,7 @@ Interfaces are purely abstract, abstract classes can implement some methods
 
 - Passing objects as Object in function call allows access to Object base class methods (not the other methods on the object)
 - But overridden methods from the Object base class will be called from the passed object (runtime polymorphism)
-- Can case to classes higher up the hierarchy (e.g. from `Hunter` to `Person` but not the other way around)
+- Can cast to classes higher up the hierarchy (e.g. from `Hunter` to `Person` but not the other way around)
 
 - Casting - Object is still the same object, but "treat" like the casted object.
 - `(Person)aHunterInstance` means `aHunterInstance` is still a `Hunter` but gets treated like a `Person` in this case. 
@@ -55,19 +55,19 @@ Interfaces are purely abstract, abstract classes can implement some methods
 
 *A contract: If you implement my interface then you must implement my methods - Nish*
 
- - C# will only allow you to inherit from one class
- - C# will allow you to implement multiple interfaces
+ - C# will only allow you to *inherit* from one `class`
+ - C# will allow you to *implement* multiple `interfaces`
 
- e.g. Define interface for anything moveable
+ e.g. Define `IMoveable` interface for anything moveable
 
  - All methods declared in an interface are abstract
- - An interfaces properties and methods are public
- - Add to class signature in the same way as inheritance
+ - An interface's properties and methods are public
+ - Add an implemented `interface` to the `class` signature using the same syntax as inheritance
 
  - Can classify types by interfaces implemented e.g. anything that implements the `IMovable` interface is considered an `IMovable` type.
 
 - You don't instantiate `abstract` classes
-- you don't instantiate `interface`s
+- you don't instantiate an `interface`
 
 ## Pair programming
 

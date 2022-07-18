@@ -12,7 +12,7 @@ public class IsPalindrome
     [Test]
     public void GivenEmptyString_ThrowsArgumentException()
     {
-        Assert.That(() => Program.IsPalindrome(""), Throws.TypeOf<ArgumentException>());
+        Assert.That(() => Program.VerifyPalindrome(""), Throws.TypeOf<ArgumentException>());
     }
 
     [TestCase("a")]
@@ -20,7 +20,7 @@ public class IsPalindrome
     [TestCase("1")]
     public void GivenLength1String_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("11")]
@@ -28,7 +28,7 @@ public class IsPalindrome
     [TestCase("99")]
     public void GivenLength2Numbers_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("an")]
@@ -38,7 +38,7 @@ public class IsPalindrome
     [TestCase("to")]
     public void GivenLength2Words_ReturnsFalse(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.False);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.False);
     }
 
     [TestCase("bib")]
@@ -51,7 +51,7 @@ public class IsPalindrome
     [TestCase("pop")]
     public void GivenLength3Palindromes_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("apt")]
@@ -62,13 +62,13 @@ public class IsPalindrome
     [TestCase("fit")]
     public void GivenLength3Words_ReturnsFalse(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.False);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.False);
     }
 
     [TestCase("tool")]
     public void GivenLength4WordsWithSameCentre_ReturnsFalse(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.False);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.False);
     }
 
     [TestCase("deed")]
@@ -80,7 +80,7 @@ public class IsPalindrome
     [TestCase("pullup")]
     public void GivenSingleWordEvenPalindromes_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("civic")]
@@ -100,14 +100,14 @@ public class IsPalindrome
     [TestCase("rotavator")]
     public void GivenSingleWordOddPalindromes_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("put-up")]
     [TestCase("pull-up")]
     public void GivenSingleWordPalindromesWithNonAlphabetics_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 
     [TestCase("A man, a plan, a canal, Panama!")]
@@ -115,6 +115,6 @@ public class IsPalindrome
     [TestCase("Madam, I'm Adam.")]
     public void GivenPalindromePhrasesWithNonAlphabetics_ReturnsTrue(string stringToTest)
     {
-        Assert.That(Program.IsPalindrome(stringToTest), Is.True);
+        Assert.That(Program.VerifyPalindrome(stringToTest), Is.True);
     }
 }
