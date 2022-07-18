@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using System.Collections.Generic;
 
@@ -8,17 +9,23 @@ namespace AdvancedNUnit
         [SetUp]
         public void Setup() { }
 
-        [Test]
-        public void Add_Always_ReturnsExpectedResult()
+        [TestCaseSource("AddCases")]
+        [Category("Happy Path")]
+        public void Add_Always_ReturnsExpectedResult(int x, int y, int expectedResult)
         {
             // Arrange
-            var expectedResult = 6;
-            var subject = new Calculator { Num1 = 2, Num2 = 4 };
+            var subject = new Calculator { Num1 = x, Num2 = y };
             // Act
             var result = subject.Add();
             // Assert
             Assert.That(result, Is.EqualTo(expectedResult), "optional failure message");
         }
+
+        private static object[] AddCases =
+            {
+                new int[] {2, 4, 6},
+                new int[] {-2, 4, 2}
+            };
 
         [Test]
         public void SomeConstraints()
@@ -48,7 +55,7 @@ namespace AdvancedNUnit
         [Test]
         public void TestArrayOfStrings()
         {
-            var fruit = new List<string> {"apple", "pear", "banana", "peach"};
+            var fruit = new List<string> { "apple", "pear", "banana", "peach" };
 
             Assert.That(fruit, Does.Contain("pear"));
             Assert.That(fruit, Does.Not.Contain("kiwi"));
@@ -60,12 +67,27 @@ namespace AdvancedNUnit
         public void TestRange()
         {
             Assert.That(8, Is.InRange(1, 10));
-            
+
             List<int> nums = new List<int> { 4, 2, 7, 5, 9 };
 
             Assert.That(nums, Is.All.InRange(1, 10));
             Assert.That(nums, Has.Exactly(2).InRange(1, 4));
         }
+
+        [TestCase(2, 1)]
+        [Category("Happy Path")]
+        public void Divide_ResturnsExpectedResult(int Num1, int Num2)
+        {
+            var subject = new Calculator { Num1 = Num1, Num2 = Num2 };
+            Assert.That(subject.Divide(), Is.EqualTo(2));
+        }
+
+        [TestCase(2, 0)]
+        [Category("Error Path")]
+        public void DivideByZero_Throws(int Num1, int Num2)
+        {
+            var subject = new Calculator { Num1 = Num1, Num2 = Num2 };
+            Assert.That(() => subject.Divide(), Throws.TypeOf<ArgumentException>());
+        }
     }
-    
 }

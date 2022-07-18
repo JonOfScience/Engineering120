@@ -31,7 +31,7 @@ namespace PalindromeApp
         {
             StringBuilder cleanedString = new StringBuilder();
             foreach (char element in stringToClean.ToLower())
-                if (element >= 97 && element <= 122) cleanedString.Append(element);
+                if ((element >= 97 && element <= 122) || (element >= 48 && element <= 57)) cleanedString.Append(element);
             return cleanedString;
         }
 
