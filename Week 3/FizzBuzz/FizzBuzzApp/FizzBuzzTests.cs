@@ -11,23 +11,13 @@ namespace FizzBuzzApp
     public class FizzBuzzTests
     {
         // 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz
-        [Test]
-        public void GivenOne_Return_OneString()
+        [TestCase(1, "1")]
+        [TestCase(2, "1 2")]
+        [TestCase(3, "1 2 Fizz")]
+        [TestCase(4, "1 2 Fizz 4")]
+        public void GivenN_Return_TheExpectedString(int n, string expectedResult)
         {
-            Assert.That(Program.FizzBuzz(1), Is.EqualTo("1"));
+            Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
         }
-
-        [Test]
-        public void GivenTwo_Return_TwoString()
-        {
-            Assert.That(Program.FizzBuzz(2), Is.EqualTo("1 2"));
-        }
-
-        [Test]
-        public void GivenThree_Return_OneTwoFizzString()
-        {
-            Assert.That(Program.FizzBuzz(3), Is.EqualTo("1 2 Fizz"));
-        }
-
     }
 }
