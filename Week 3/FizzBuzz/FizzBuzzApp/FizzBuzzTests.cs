@@ -16,7 +16,7 @@ namespace FizzBuzzApp
         [TestCase(3, "1 2 Fizz")]
         [TestCase(4, "1 2 Fizz 4")]
         [TestCase(5, "1 2 Fizz 4 Buzz")]
-        //[TestCase(6, "1 2 Fizz 4 Buzz Fizz")]
+        [TestCase(6, "1 2 Fizz 4 Buzz Fizz")]
         public void GivenN_Return_TheExpectedString(int n, string expectedResult)
         {
             Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
