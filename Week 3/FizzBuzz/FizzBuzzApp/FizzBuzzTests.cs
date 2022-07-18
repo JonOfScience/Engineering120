@@ -25,7 +25,14 @@ namespace FizzBuzzApp
         [TestCase(6, "1 2 Fizz 4 Buzz Fizz")]
         [TestCase(9, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz")]
         [TestCase(12, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz")]
+        [TestCase(18, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz")]
         public void GivenNDivisibleBy3_Returns_TheExpectedString(int n, string expectedResult)
+        {
+            Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
+        }
+
+        [TestCase(15, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz")]
+        public void GivenNDivisibleBy15_Returns_TheExpectedString(int n, string expectedResult)
         {
             Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
         }

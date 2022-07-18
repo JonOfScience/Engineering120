@@ -9,7 +9,11 @@ public class Program
         {
             if (i > 1)
                 fizzBuzzReturn += " ";
-            if (i % 3 == 0)
+            if (i % 15 == 0)
+            {
+                fizzBuzzReturn += "FizzBuzz";
+            }
+            else if (i % 3 == 0)
             {
                 fizzBuzzReturn += "Fizz"; 
             }
@@ -22,11 +26,6 @@ public class Program
                 fizzBuzzReturn += $"{i}";
             }
         }
-        //if (n == 1) return "1";
-        //else if (n == 2) return "1 2";
-        //else if (n == 3) return "1 2 Fizz";
-        //else if (n == 4) return "1 2 Fizz 4";
-        //else return "1 2 Fizz 4 Buzz";
         return fizzBuzzReturn;
     }
 }
