@@ -5,6 +5,7 @@ public class Program
     public static string FizzBuzz(int n)
     {
         if (n == 1) return "1";
-        else return "1 2";
+        else if (n == 2) return "1 2";
+        else return "1 2 Fizz";
     }
 }

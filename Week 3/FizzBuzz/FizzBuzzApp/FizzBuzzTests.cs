@@ -23,5 +23,11 @@ namespace FizzBuzzApp
             Assert.That(Program.FizzBuzz(2), Is.EqualTo("1 2"));
         }
 
+        [Test]
+        public void GivenThree_Return_OneTwoFizzString()
+        {
+            Assert.That(Program.FizzBuzz(3), Is.EqualTo("1 2 Fizz"));
+        }
+
     }
 }
