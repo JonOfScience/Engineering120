@@ -10,21 +10,19 @@ public class Program
             if (i > 1)
                 fizzBuzzReturn += " ";
             if (i % 15 == 0)
-            {
                 fizzBuzzReturn += "FizzBuzz";
-            }
             else if (i % 3 == 0)
-            {
-                fizzBuzzReturn += "Fizz"; 
-            }
+                fizzBuzzReturn += "Fizz";
             else if (i % 5 == 0)
-            {
                 fizzBuzzReturn += "Buzz";
-            }
             else
-            {
                 fizzBuzzReturn += $"{i}";
-            }
+            
+            //if (i > 1)
+            //{
+            //    fizzBuzzReturn += " ";
+            //}
+
         }
         return fizzBuzzReturn;
     }

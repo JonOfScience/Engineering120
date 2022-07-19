@@ -25,7 +25,7 @@ namespace FizzBuzzApp
         [TestCase(12, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz")]
         [TestCase(18, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz")]
         [TestCase(21, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz")]
-        public void GivenNDivisibleBy3_Returns_TheExpectedString(int n, string expectedResult)
+        public void GivenNDivisibleBy3_Returns_StringsWithFizz(int n, string expectedResult)
         {
             Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
         }
@@ -33,14 +33,14 @@ namespace FizzBuzzApp
         [TestCase(5, "1 2 Fizz 4 Buzz")]
         [TestCase(10, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz")]
         [TestCase(20, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz")]
-        public void GivenNDivisibleBy5_Returns_TheExpectedString(int n, string expectedResult)
+        public void GivenNDivisibleBy5_Returns_StringsWithBuzz(int n, string expectedResult)
         {
             Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
         }
 
         [TestCase(15, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz")]
         [TestCase(30, "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz")]
-        public void GivenNDivisibleBy15_Returns_TheExpectedString(int n, string expectedResult)
+        public void GivenNDivisibleBy15_Returns_StringsWithFizzBuzz(int n, string expectedResult)
         {
             Assert.That(Program.FizzBuzz(n), Is.EqualTo(expectedResult));
         }

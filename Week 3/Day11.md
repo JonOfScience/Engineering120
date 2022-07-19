@@ -32,7 +32,7 @@ Advantages
 
 ##### Abstraction
 
-When we describe something in an abstract way (e.g. "I have a car") we have a shared understand of what the elements are.
+When we describe something in an abstract way (e.g. "I have a car") we have a shared understanding of what the elements are.
 
 - Classes that represent real-world things
 
