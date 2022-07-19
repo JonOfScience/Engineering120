@@ -25,38 +25,25 @@ public class Program
                 numDelimiters = delimeterString.Count(x => (x == '['));
                 if (numDelimiters > 1)
                 {
-                    var allDelimiters = delimeterString.Split("][");
-                    allDelimiters[0] = allDelimiters[0].Replace("[", "");
-                    allDelimiters[allDelimiters.Length - 1] = allDelimiters[allDelimiters.Length - 1].Replace("]", "");
-                    // Feed this string array back into "delimeter"
+                    var allDelimiters = delimeterString.Split(']', '[', StringSplitOptions.RemoveEmptyEntries);
                 }
                 else
                     delimiters[0] = delimeterString.Substring(1, delimeterString.Length - 2);
             }
             numbers = numbers.Remove(0, endOfDelimiter);
         }
-
-        Queue<string> oldQueue = new Queue<string>();
-        oldQueue.Enqueue(numbers);
-
-        Queue<string> newQueue = new Queue<string>();
-        List<string> arrString;
+        
         foreach (string delimiter in delimiters)
         {
-            newQueue = new Queue<string>();
-            while (oldQueue.Count > 0)
-            {
-                arrString = oldQueue.Dequeue().Split(delimiter).Where(x => x.Length > 0).ToList();
-                arrString.ForEach(x => newQueue.Enqueue(x));
-            }
-            oldQueue = new Queue<string>(newQueue);
+            numbers = numbers.Replace(delimiter, delimiters[0]);
         }
+        string[] arrString = numbers.Split(delimiters[0]).Where(x => x.Length > 0).ToArray();
 
         List<int> negative = new List<int>();
         int total = 0;
-        while (oldQueue.Count > 0)
+        foreach (string element in arrString)
         {
-            int.TryParse(oldQueue.Dequeue(), out int x);
+            int.TryParse(element, out int x);
             if (x < 0)
                 negative.Add(x);
             if (x <= 1000)

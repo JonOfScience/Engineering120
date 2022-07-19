@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonSortApp", "JonSortApp\JonSortApp.csproj", "{3E0184FB-6A6D-4711-B0A8-DA5F6082823A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingTests", "SortingTests\SortingTests.csproj", "{3D19694E-63B5-4762-B125-6E3DD936AD7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E0184FB-6A6D-4711-B0A8-DA5F6082823A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0184FB-6A6D-4711-B0A8-DA5F6082823A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0184FB-6A6D-4711-B0A8-DA5F6082823A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0184FB-6A6D-4711-B0A8-DA5F6082823A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D19694E-63B5-4762-B125-6E3DD936AD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D19694E-63B5-4762-B125-6E3DD936AD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D19694E-63B5-4762-B125-6E3DD936AD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D19694E-63B5-4762-B125-6E3DD936AD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B66379A-FD2F-4E43-BACB-E2723BA9B560}
+	EndGlobalSection
+EndGlobal
