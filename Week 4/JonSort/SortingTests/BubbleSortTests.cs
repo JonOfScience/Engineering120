@@ -17,7 +17,7 @@ namespace SortingTests
         [TestCaseSource(nameof(SadCases))]
         public void GivenInValidSortingInput_BubbleSort_Throws(int[] input)
         {
-            Assert.That(() => _sorter.BubbleSort(input), Throws.TypeOf<ArgumentException>());
+            Assert.That(() => _sorter.BubbleSort(input), Throws.TypeOf<ArgumentException>().With.Message.Contains("Input must contain at least one element"));
         }
         static object[] SadCases =
         {
