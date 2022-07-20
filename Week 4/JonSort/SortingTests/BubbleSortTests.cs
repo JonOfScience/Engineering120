@@ -24,6 +24,8 @@ namespace SortingTests
             new object[] { new int[] { } }
         };
 
+        // MaxInt and MinInt
+
         [TestCaseSource(nameof(HappyCases))]
         public void GivenValidSortingInput_BubbleSort_ReturnsExpectedResult(int[] input, int[] expectedResult)
         {

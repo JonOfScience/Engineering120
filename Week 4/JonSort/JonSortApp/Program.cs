@@ -26,7 +26,7 @@
                         input[idx] = input[idx + 1];
                         input[idx + 1] = _temp;
                         changes++;
-                    }
+                    }// If no changes can we start to step down the max value of idx?
                 }
 
             } while (changes > 0);
