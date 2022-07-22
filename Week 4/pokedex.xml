@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pokedex title="Kanto">
+   <pokemon>
+      <name>Bulbasaur</name>
+      <number>1</number>
+      <type>Grass Poison</type>
+      <evolvesto>Ivysaur</evolvesto>
+   </pokemon>
+   <pokemon>
+      <name>Ivysaur</name>
+      <number>2</number>
+      <type>Grass Poison</type>
+      <evolvesto>Venusaur</evolvesto>
+   </pokemon>
+   <pokemon>
+      <name>Venusaur</name>
+      <number>3</number>
+      <type>Grass Poison</type>
+      <evolvesto></evolvesto>
+   </pokemon>
+   <pokemon>
+      <name>Charmander</name>
+      <number>4</number>
+      <type>Fire</type>
+      <evolvesto>Charmeleon</evolvesto>
+   </pokemon>
+</pokedex>

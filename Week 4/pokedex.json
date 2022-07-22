@@ -1,0 +1,44 @@
+{
+   "region": "Kanto",
+   "pokemon": [
+      {
+         "name": "Bulbasaur",
+         "number": 1,
+         "type": [
+            "Grass",
+            "Poison"
+         ],
+         "evolves": true,
+         "evolvesto": "Ivysaur"
+      },
+      {
+         "name": "Ivysaur",
+         "number": 2,
+         "type": [
+            "Grass",
+            "Poison"
+         ],
+         "evolves": true,
+         "evolvesto": "Venusaur"
+      },
+      {
+         "name": "Venusaur",
+         "number": 3,
+         "type": [
+            "Grass",
+            "Poison"
+         ],
+         "evolves": false,
+         "evolvesto": null
+      },
+      {
+         "name": "Charmander",
+         "number": 4,
+         "type": [
+            "Fire"
+         ],
+         "evolves": true,
+         "evolvesto": "Charmeleon"
+      }
+   ]
+}
