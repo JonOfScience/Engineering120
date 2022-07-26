@@ -1,0 +1,45 @@
+
+
+Build Academy Schema with several tables
+
+
+
+Title VARCHAR(4),
+	FirstName VARCHAR(20),
+	LastName VARCHAR(20),
+	-- Move University to Universities
+	University VARCHAR(120),
+	Course VARCHAR(20),
+	GradeAchieved VARCHAR(20),
+	CityOfResidence VARCHAR(20),
+	DateJoined DATE,
+	Stream VARCHAR(20),
+	-- ID in table Trainers
+	Trainer INT,
+	HasGraduated BIT,
+	IsOnSite BIT,
+	-- ID in table Clients
+	OnSiteAt INT
+
+
+Efficiency and Recursion
+General OOP
+Refactoring and Code Smells
+Design Patterns
+JSON and XML
+Files, Logging and Streaming
+SQL
+
+23 Questions
+- 17 Questions are multiple choice questions
+- 3 C# coding questions?
+- 3 SQL statement questions (ALL OR NOTHING)
+
+
+
+Queries MUST execute – otherwise 0 marks
+• Use consistent capitalisation and indentation of SQL Statements
+• Use concise and consistent table alias names
+• Use column aliases to ensure tidy column headings (spaces and consistent capitalisation)
+• Concatenate any closely related columns e.g. First Name and Last Name or Address and City etc
+• Put comments throughout

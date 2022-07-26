@@ -1,0 +1,9 @@
+[17:18] Nishant Mandal
+SELECT lastname AS CUSTOMER_LASTNAME
+, COUNT(po.order_id) AS PURCHASE_COUNT
+FROM customer c
+INNER JOIN purchase_order po
+    ON c.customer_id = po.customer_id
+GROUP BY lastname
+HAVING COUNT(po.order_id) > 1;
+

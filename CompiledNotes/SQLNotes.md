@@ -282,7 +282,7 @@ CREATE TABLE personnel (
 )
 ```
 
-This query will *always* execute without errors.
+This query will *always* execute without errors (unless the table gets linked to another using Foreign Keys).
 
 ## Data Types
 
@@ -521,6 +521,7 @@ Logical Sequence / Syntax Sequence
 - HAVING
 - ORDER BY
 
+```sql
 -- SQL request(s)​​​​​​‌​​‌‌​‌‌​‌‌‌​​‌​​‌​​​​​​‌ below
 SELECT DISTINCT pc.name, AVG(pr.price) AS "Average Price"
 FROM product pr
@@ -530,7 +531,7 @@ WHERE pr.name LIKE '%0%'
 GROUP BY pc.product_category_id
 HAVING AVG(pr.price) > 100
 ORDER BY pc.name ASC
-
+```
 
 Processing Sequence
 
@@ -676,6 +677,11 @@ SELECT TOP 5 *
 ```
 Select all columns on the top 5 rows of the query
 
+```sql
+SELECT TOP 10 WITH TIES *
+```
+Select all columns on the top 10 rows of the query including any records with tieing order.
+
 #### `ORDER BY`
 
 Order the results either ascending `ASC` or descending `DESC`
@@ -736,6 +742,8 @@ FROM table;
 - Everything in the `SELECT` clause must be an aggregate, or appear in the `GROUP BY` clause
 
 #### `HAVING`
+- Like a `WHERE` clause for filtering with `GROUP BY`
+
 - Filter based on aggregation
 ```sql
     HAVING AVG(price) < 200;
