@@ -1,6 +1,8 @@
-- # Day 22 -  26/07/2022 - ISTQB
+- # Day 22 -  26/07/2022 - ISTQB Day 1
 
 *"The ISTQB is a nightmare"* - Nish
+
+[TOC]
 
 Why the ISTQB?
 - ISTQB jobs is globally recognised
@@ -335,7 +337,7 @@ Typical Failures
 - Incorrect logic
 - ...
 
-### Integration Testing
+### Integration Testing (APIs)
 - Building something larger from a number of different units
 - Find issues between them
 
@@ -344,8 +346,8 @@ Typical Failures
 Two types of integration to remember
 - Big Bang Integration (all together and testing together - Unit Integration Testing)
 - Incremental integration ()
-    - Top down
-    - Bottom up
+    - Top down (stubs - Will use later)
+    - Bottom up (drivers - Will use later)
 
 #### Objectives
 
