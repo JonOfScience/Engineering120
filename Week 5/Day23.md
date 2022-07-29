@@ -1,4 +1,4 @@
-# Day 22 -  26/07/2022 - ISTQB Day 2
+# Day 23 -  27/07/2022 - ISTQB Day 2
 
 ## Chapter 2: SDLC Continued.
 
