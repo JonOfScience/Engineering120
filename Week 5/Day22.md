@@ -141,17 +141,20 @@ Remember the *Work Products* for each one
 
 ```mermaid
 graph TD
-tn1[test Planning _P_] --> tn2[test Monitoring & Control _MC_];
-tn2 --> tn1;
-tn2 --> tn3[Test Analysis _TA_];
-tn3 --> tn4[test Design _D_];
-tn4 --> tn3;
-tn4 --> tn5[Test Implementation _TI_];
-tn5 --> tn4;
-tn5 --> tn6[test Execution _E_];
-tn6 --> tn3;
+tn1[test Planning _P_];
+tn1 --Test Plans, Test Schedule--> tn2;
+tn2[test Monitoring & Control _MC_];
+tn2 ----> tn1;
+tn2 --Test Progress Reports, Test Summary Reports--> tn3[Test Analysis _TA_];
+tn3 --Test Conditions, Test Charters--> tn4[test Design _D_];
+tn4 ---> tn3;
+tn4 --Sets of Test Cases, Test data design, Test Environment Design --> tn5[Test Implementation _TI_];
+tn5 ---> tn4;
+tn5 --Test procedures and sequences, Test Suites, Test environment and data, Test execution schedule--> tn6[test Execution _E_];
+tn6 ----> tn3;
 tn6 --> tn4;
-tn6 --> tn7[test completion];
+tn6 --Test case execution documentation, Defeect Reports--> tn7[test completion];
+tn7 --Test summary reports, Actionable Items, Finalised testware--> tn8[END]
 ```
 
 #### Test Planning
@@ -279,7 +282,7 @@ Flow
 - Execute pre-written tests as soon as the code is complete
 
 Validation - Are we doing what it says in the requirements (are we building the *right* product?) (No information is being lost, no ambiguities or errors)
-Verification - Are we builing the product correctly? (procedures & processes)
+Verification - Are we building the product correctly? (procedures & processes)
 
 Pros
 - Defects found early
