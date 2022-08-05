@@ -30,7 +30,7 @@ public class WhenTheOutwardPostcodeServiceIsCalled_WithEmptyOutcode
     }
 
     [Test]
-    [Category("Error - Empty Outcode")]
+    [Category("Empty Outcode")]
     public void Error_IsInvalidLongitudeLatitudeSubmitted()
     {
         Assert.That(_outwardPostcodeService.ResponseContent["error"].ToString(), Contains.Substring("Invalid longitude/latitude submitted"));

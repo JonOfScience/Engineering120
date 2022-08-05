@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APIClientApp
+namespace APIClientApp.PostcodesIOService.DataHandling
 {
 
     // Property names MUST correspond to the keys of the JSON response
     // Otherwise they won't map
 
-    public class BulkPostcodeResponse
+    public class BulkPostcodeResponse : IResponse
     {
         public int status { get; set; }
         public Result[] result { get; set; }
     }
 
-    public class SinglePostcodeResponse
+    public class SinglePostcodeResponse : IResponse
     {
         public int status { get; set; }
         public Postcode result { get; set; }

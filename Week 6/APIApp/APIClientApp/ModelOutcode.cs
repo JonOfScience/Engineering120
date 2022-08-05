@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using APIClientApp.PostcodesIOService.DataHandling;
 
 namespace APIClientApp
 {
 
-    public class OutcodeResponse
+    public class OutcodeResponse : IResponse
     {
         public int status { get; set; }
         public OutcodeResult result { get; set; }
