@@ -1,6 +1,10 @@
 # Day 26 - 01/08/2022
 
+https://www.geeksforgeeks.org/advantages-and-disadvantages-of-test-driven-development-tdd/
+
 ## Lambdas
+
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
 
 - Have no name
 - Is declared in the place where it is used

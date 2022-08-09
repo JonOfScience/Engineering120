@@ -120,7 +120,7 @@ POSTman
 HTTP response codes
 
 CRUD
-: Create, R?, Update, Delete
+: Create, Read, Update, Delete
 
 ### RESTful APIs (others are SOAP)
 https://restfulapi.net/rest-architectural-constraints/
