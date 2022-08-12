@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore Week%204/SafariParkCodeSmells_Starter/SafariPark.sln
+      run: dotnet restore "Week 4/SafariParkCodeSmells_Starter/SafariPark.sln"
     - name: Build
-      run: dotnet build --no-restore Week%204/SafariParkCodeSmells_Starter/SafariPark.sln
+      run: dotnet build --no-restore "Week 4/SafariParkCodeSmells_Starter/SafariPark.sln"
     - name: Test
-      run: dotnet test --no-build --verbosity normal Week%204/SafariParkCodeSmells_Starter/SafariPark.sln
+      run: dotnet test --no-build --verbosity normal "Week 4/SafariParkCodeSmells_Starter/SafariPark.sln"
