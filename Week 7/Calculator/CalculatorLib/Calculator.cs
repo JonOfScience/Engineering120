@@ -25,5 +25,10 @@
             if (Num2 == 0) throw new DivideByZeroException("Cannot Divide By Zero");
             return Num1 / Num2;
         }
+
+        public int SumDivisibleBy2()
+        {
+            return -1;
+        }
     }
 }
