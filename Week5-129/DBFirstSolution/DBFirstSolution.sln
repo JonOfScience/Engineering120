@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindData", "NorthwindData\NorthwindData.csproj", "{A7459090-304A-45BD-995A-DCE8AF2A2771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLPracticalExercise", "SQLPracticalExercise\SQLPracticalExercise.csproj", "{C0FDFAC5-6F5B-42A3-9C05-16FC6EC5A43B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7459090-304A-45BD-995A-DCE8AF2A2771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7459090-304A-45BD-995A-DCE8AF2A2771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7459090-304A-45BD-995A-DCE8AF2A2771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7459090-304A-45BD-995A-DCE8AF2A2771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FDFAC5-6F5B-42A3-9C05-16FC6EC5A43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FDFAC5-6F5B-42A3-9C05-16FC6EC5A43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FDFAC5-6F5B-42A3-9C05-16FC6EC5A43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FDFAC5-6F5B-42A3-9C05-16FC6EC5A43B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD019082-B34A-4903-BFAB-032C1D8E48EB}
+	EndGlobalSection
+EndGlobal

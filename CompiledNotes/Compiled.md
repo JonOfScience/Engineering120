@@ -1,4 +1,4 @@
-# Week 4 - OOP (Object-Oriented Programming)
+# Week 3 - OOP (Object-Oriented Programming)
 
 [TOC]
 
@@ -238,11 +238,258 @@ public class Hunter : Person
 - Can instantiate structs without necessarily calling constructors (i.e. no need to use `new`)
 - Structs are VALUE types, not REFERENCE types.
 
+## SOLID Principles
+
+- Single responsibility - A class should only have one reason to change (each class should solve only one problem)
+- Open/Closed - Open for extension, closed for modification (extend a class's behaviour without modifying it)
+- Liskov substitution - objects of a subclass should be able to substituted in place of objects of a superclass without breaking the application
+- Interface segregation - many small interfaces are better than one big one. A client object can then select which to implement (composition over inheritance).
+- Dependency inversion - Depend on abstractions, not on concretions
+
+### Single Responsibility Principle (SRP) (High cohesion, Low coupling)
+"*a class or module should have one, and only one, reason to change.*" - Robert C. Martin
+
+Separation of concerns
+: different classes handling different, independent tasks/problems
+
+Separation of concerns means:
+- A class should have have one responsibility / purpose
+- class members should be cohesive (related data, methods manipulate or return this data)
+- should have only one reason to change
+
+"We want our systems to be composed of many small classes, not a few large ones. Each small class encapsulates a single responsibility, has a single reason to change, and collaborates with a few others to achieve the desired system behaviors."
+
+"Gather together the things that change for the same reasons. Separate those things that change for different reasons."
+
+#### SRP Examples
+- (ours) Moving the functionality for camera out of Hunter into its own Camera class (decoupling)
+- Having seperate classes for a Journal (and its entries), and Persistence.
+
+#### SRP Reading:
+https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html
+
+### Open / Closed Principle (OCP)
+"*Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification.*" - Robert C. Martin
+
+- open for extension but closed for modification (of behaviour. Refactoring is ok)
+- don't change existing classes (as they might be used and you don't know what you might be breaking)
+- new functionality can be added by adding derived classes
+- overriding methods in derived classes can add functionality
+
+#### OCP Examples
+
+Use of "Enterprise" "Specification" pattern.
+
+Before: Violates OCP
+```mermaid
+classDiagram 
+    direction BT
+    class ProductFilter
+
+    ProductFilter: +FilterBySize(products, size)
+    ProductFilter: +FilterByColor(products, color)
+    ProductFilter: +FilterBySizeAndColour(products, size, color)
+```
+Adding a new filter requires us to go back into `ProductFilter` to add another filtering method. **You shouldn't have to go back into existing code to add additional functionality.**
+
+After: Respects OCP
+```mermaid
+classDiagram 
+    direction BT
+    class ISpecification
+    <<interface>> ISpecification
+    class ColorSpecification
+    class SizeSpecification
+    class AndSpecification
+    class IFilter
+    <<interface>> IFilter
+    class BetterFilter
+
+    ISpecification: +IsSatisfied(product)
+    ISpecification: +operator&()
+
+    ColorSpecification --|> ISpecification : implements
+    SizeSpecification --|> ISpecification : implements
+    AndSpecification --|> ISpecification : implements
+
+    ColorSpecification: -color
+    ColorSpecification: +ColorSpecification(color)
+    ColorSpecification: +IsSatisfied(product)
+
+    SizeSpecification: -size
+    SizeSpecification: +SizeSpecification(size)
+    SizeSpecification: +IsSatisfied(product)
+
+    AndSpecification: -first
+    AndSpecification: -second
+    AndSpecification: +IsSatisfied(product)
+
+    IFilter: +Filter(products, ISpecification)
+
+    BetterFilter: +Filter(products, ISpecification)
+
+    BetterFilter --|> IFilter : implements
+```
+Adding a new filter now requires us only to create a new class that implements `ISpecification` to pass to `BetterFilter`.
+
+#### OCP Reading
+
+### Liskov Substitution Principle (LSP) (Polymorphism)
+- You should be able to substitude a base for a subtype
+- Subtypes must be substitutable for their base types without breaking the application
+- Must implement inherited methods in the expected ways (no surprises)
+- **P**rinciple **O**f **L**east **A**stonishment (**POLA**)
+- Make some things virtual so we are accessing the correct member
+
+"You should always be able to uptype without breaking methods or their results"
+
+#### LSP Examples
+
+#### LSP Reading
+
+
+### Interface Segregation Principle (ISP)
+- Many small, specific interfaces are better than one large, general purpose one
+- Classes that implement an interface don't have to implement methods they don't need.
+- Interface in this context means the public methods and Properties of a code module (`abstract` or concrete C# `class`es or `interface`s)
+- Interfaces can also inherit from other interfaces
+```csharp
+public interface IMoveable : ISingleMoveable, IMultiMoveable { }
+public interface ISingleMoveable { string Move(); }
+public interface IMultiMoveable {string Move(int times);}
+```
+- Can delegate calls to implemented methods within a class (#DecoratorPattern)
+- Don't put too much into an interface; split into separate interfaces
+- YAGNI - You Ain't Going to Need It
+
+
+### Dependency Inversion Principle (DIP)
+- Depend on abstracts rather than concrete instances
+- Both high and low level modules should depend on abstractions
+- High-level - Business rules, processes, guts of the application
+- Low-level - Plumbing code, particularly for IO
+
+- Hunter -> IShootable relationship is an example of Dependency Injection
+- At Runtime both Hunter and Camera know nothing about each other, they both just know about the interface IShootable
+
+- Implement an interface as an abstraction that both the high and low level modules can relate to.
+
+- "High-level modules should not depend upon low-level ones; use abstractions"
+
+- GUI code behind classes is low-level
+
+### Solid Relationships
+SOLID Relationships
+- SRP and ISP encourage small cohesive types
+- These can be extended using OSP
+- ISP aids LSP and DIP
+- DIP enables OSP (using Dependency Injection can extend functionality without breaking the application)
+
+- GRASP principles
+- Design Patterns
+- DRY - Don't Repeat Yourself
+- YAGNI - You Aren't Going To Need It
+- KISS
+-
+- PDD - Pain-Driven Development
+- Use simple techniques until they cause pain
+- Then refactor when painful
+
+Prioritising ISP and DSP supports the use of Compositional classes rather than Inheritance classes
+
+Can add default implementation to interfaces as of C# 8
+
 # Week 4 - Advanced NUnit Testing
 
 ## Testing Classes and Structs
 
 - Need to instantiate a class to test the methods on it.
+
+
+# Week 5 - Eng 129 - Linq & Entity Framework
+
+## Language Integrated Query (LINQ)
+
+We can query *any* collection.
+
+- Queries provide an `IQueryable` interface
+- `where` requires a `boolean` result so the following will fail
+```csharp
+var query = db.Customer.Where(CustomerId == "BONAP")
+```
+but this will work
+```csharp
+var query = db.Customer.Where(c => c.CustomerId == "BONAP")
+```
+This just defines the query, it is executed with an execution method, e.g. `FirstOrDefault()`:
+```csharp
+var selectedCustomer = query.FirstOrDefault()
+```
+We can carry out definition and execution in the same line
+```csharp
+var selectedCustomer = db.Customer.Where(c => c.CustomerId == "BONAP").FirstOrDefault()
+```
+
+## Entity Framework
+
+### NuGet Packages Required
+`Microsoft.EntityFrameworkCore`
+`Microsoft.EntityFrameworkCore.SqlServer` (Allows Entity Framework Core to be used with Microsoft SQL Server(including Azure SQL Database).
+`Microsoft.EntityFrameworkCore.Tools`
+
+#### Scaffolding in PMC
+`Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Northwind;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False' Microsoft.EntityFrameworkCore.SqlServer`
+
+- `Scaffold-DbContext` - used in the DB first approach to extrapolate the model (classes) from the database.
+
+- `== null!` the `!` will disappear at compile time. The compiler just accepts null! to mean that it *won't* actually be null after instantiation
+
+Scaffolding from a database using Entity Framework
+https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=vs
+
+Partial classes can be defined across multiple files
+
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+
+Context class sits between the program and the DataBase - Represents an EndPoint for the DataBase
+Builds the relationships between the Tables so that we can use them.
+Uses DbSets
+https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbset-1?view=efcore-6.0
+
+Add vs AsyncAdd? Use Cases
+
+#### region CRUD Functionality
+##### READ
+//foreach (var c in db.Customers)
+//{
+//    Console.WriteLine(c);
+//}
+//db.Customers.ToList().ForEach(c => Console.WriteLine(c));
+
+##### CREATE
+//var newCustomer = new Customer()
+//{
+//    CustomerId = "MAKSY",
+//    ContactName = "Maksym Lyskov",
+//    CompanyName = "SpartaGlobal"
+//};
+//db.Customers.Add(newCustomer);
+//db.SaveChanges();
+// https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges?view=efcore-6.0#microsoft-entityframeworkcore-dbcontext-savechanges
+
+##### UPDATE
+//var selectedCustomer = db.Customers.Find("MAKSY");
+//selectedCustomer.City = "Kyiv";
+//db.SaveChanges();
+
+// Generally, no database interaction will be performed until SaveChanges() is called.
+// 
+
+##### DELETE
+//var customerToDelete = db.Customers.Find("MAKSY");
+//db.Customers.Remove(customerToDelete);
+//db.SaveChanges();
+#endregion
 
 ## Glossary
 
