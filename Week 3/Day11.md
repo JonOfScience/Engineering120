@@ -1,7 +1,55 @@
 
-#Day 11 - 11/07/2022
+# Day 11 - 11/07/2022
 
 [TOC]
+
+## Stand-Up
+
+off-stack -> goes out of scope
+off-heap -> by garbage collector
+
+garbage collector
+- Identifies dead objects
+- Removes dead objects
+- Compacts heap
+
+
+C# as a language
+- Statically Typed
+- Type Safe
+- Memory Safe
+
+### Casting
+**Implicit casting** - No loss of data
+```csharp
+int y;
+double x = y;
+```
+
+**Explicity casting** - Forcing a cast
+```csharp
+(int)y = double x;
+```
+
+### Errors
+**Compile Time**
+- Syntax errors
+- Logical errors
+
+**Runtime**
+- Runtime errors
+
+Ternary operators
+Exception hierarchy
+Integer division
+.Net 6 vs. .Net Framework
+
+.NET Framework - Desktop applications for <u>windows</u>
+->
+.Net Core (from scratch) cross-platform
+->
+.Net 5 is the standard to unify the different branches under .Net Core
+
 
 ## OOP Videos
 

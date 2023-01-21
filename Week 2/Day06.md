@@ -22,20 +22,30 @@ Making testable code ->
 
 
 
-DAMP code:
+**DAMP** code:
 
-- Descriptive
-- And
-- Meaningful
-- Phrases
+- **D**escriptive
+- **A**nd
+- **M**eaningful
+- **P**hrases
 
 
 Remember breakpoints when debugging - Can follow the flow of the program and evolution of variables.
 
 
-var - for shorthand. Don't break type safety
+`var` 
+- for shorthand. Doesn't break type safety.
 - For collections
+
+```csharp 
+foreach (var num in numbers){}
+```
+
 - Or if you don't know the result type
+
+```csharp
+var result = class.someMethod();
+```
 
 
 ### Access modifiers
@@ -52,20 +62,24 @@ var - for shorthand. Don't break type safety
 
 
 
-Classic mode of assertion		Assert.R...
+Classic model of assertion is: `Assert.R...`
 
-Constraint model of assertion
+Constraint model of assertion is: 
+
+```csharp
+Assert.That(variableA, Is.EqualTo(VariableB));
+```
 
 
 
 ## Session 2
 
 Tests should be:
-- F - Fast
-- I - Independent (of other tests)
-- R - Repeatable (as is, for other people)
-- S - Self-validating (no second checks needed)
-- T - Timely
+- **F** - Fast
+- **I** - Independent (of other tests)
+- **R** - Repeatable (as is, for other people)
+- **S** - Self-validating (no second checks needed)
+- **T** - Timely
 
 
 
@@ -104,7 +118,7 @@ public void Test (int variable)
 
 
 
-Can use debug breakpoints in tests (run test in debug mode from within Test Explorer)
+Can use debug breakpoints in tests (run test in debug mode from within Test Explorer) to follow flow and interrogate the value of variables during execution.
 
 
 
@@ -112,5 +126,5 @@ Can use debug breakpoints in tests (run test in debug mode from within Test Expl
 [TestCase (5, "Good morning!")]
 ```
 
-Multi-parameter tests
+Can construct multi-parameter tests
 

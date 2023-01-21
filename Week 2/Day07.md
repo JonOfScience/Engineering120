@@ -21,17 +21,25 @@ Look into:
 
 
 
-Prefix vs. suffix only comes into play if it is being assigned.
+Prefix vs. suffix order only comes into play if it is being assigned.
 
 
 
 ### Integer division
 
-```var a = 5 / 2 ``` 		-> 	```2```
+```csharp
+var a = 5 / 2;
 
-```var b = 5.0 / 2``` 	->	```2.5```
+a = 2
+```
 
-If either argument is a ```double``` then the result will be inferred to also be a double by ```var```.
+```csharp
+var b = 5.0 / 2;
+
+b = 2.5
+```
+
+If either argument is a `double` then the result will be inferred to also be a double by `var`.
 
 
 ### Segmenting code
@@ -43,6 +51,8 @@ If either argument is a ```double``` then the result will be inferred to also be
 
 Allows us to section off related areas of code.
 
+(Beware developers et al. saying "we don't need tests, we write working code")
+
 
 ### APPROACH: Reset a cycling count
 
@@ -50,21 +60,20 @@ Allows us to section off related areas of code.
 x = ++x % (max_value)
 ```
 
-So when ```x``` -> ```max_value``` then ```x % max_value = 0``` therefore ```x``` resets.
+When `x` reaches `max_value` then `x % max_value = 0` therefore `x` resets to `0`.
 
 
 ### Good-Practice - Function design and readable code
-Split up functions to make your intention clear
-
+Split out functions to make your intention clear
 - To make your code readable
 
 
 
-Operators: ```+=``` , ```-=``` , ```/=``` (?) , ```%=```, ```*=```
+Operators: `+=` , `-=` , `/=` (?) , `%=`, `*=`
 
 
 ### Accessibility Modifier
-``internal`` means that it is accessible within a project (an assembly)
+`internal` means that it is accessible within a project (an assembly)
 
 
 
@@ -75,34 +84,35 @@ Best convention is that there is one class file (```.cs```) per class.
 
 ### Logical Operators
 
-
-```&&```	-> 	short circuit conditions
-
-```&```		->	check (and run) all conditions [Used primarily with binary operations]
-
-
+| operator | usage |
+|-|-|
+| `&&` | short circuit conditions | 
+| `&`  | check (and run) all conditions [Used primarily with binary/bitwise operations] |
 
 Be aware of the difference between single and double logical operators
-
-- Can use short circuit to prevent errors on evaluating an expression that could be null.
+- Short circuit can be used to prevent errors on evaluating an expression that could be null.
 
 
 
 ### Ternary Operator
 
-```boolean condition to check ? result if true : result if false```
+```csharp
+boolean condition to check ? result if true : result if false
+```
 
-Ternary chains
+Ternary chains:
 
-```condition_1 ? condition_2 ? condition_2_true : condition_2_false : condition_1_false```
+```csharp
+condition_1 ? condition_2 ? condition_2_true : condition_2_false : condition_1_false
+```
 
 
 
 ## Session 3 - Selection (`switch` vs. `if`)
 
-Switch in debug mode 	-> Handled like ifs
-
-Switch in release mode	-> Jump table (O(1))
+`switch` behaviour is mode dependent
+- in debug mode - Handled like `if`s
+- in release mode - Handled through a jump table (O(1))
 
 
 
@@ -117,17 +127,17 @@ switch (level)
 }
 ```
 
-Use switch for ```const``` or ```int``` values.
-
-Use ```if```/```else``` for ranges.
+Deciding when to us `switch` and when to use `if`/`else`
+- Use `switch` for `const` (e.g. `enum`) or `int` values that can be used for `case` values.
+- Use `if`/`else` for ranges.
 
 
 
 ## Session 4 - Iterations
 
-```static``` classes cannot be instantiated -> so all methods must also be ```static``` (e.g. ```Math```).
+`static` classes cannot be instantiated -> so all methods must also be `static` (e.g. `Math`).
 
-R-click on unimplemented methods to generate them using "Quick Actions and Refactorings"
+R-click on unimplemented methods to *generate* them using "Quick Actions and Refactorings"
 
 
 
@@ -135,11 +145,11 @@ HWK: Create a method for each type of loop which returns the highest number in a
 
 
 
-```foreach``` only works for **read-only** purposes.
+`foreach` only works for **read-only** purposes.
 
 
 
-[nums[0]] if nums is an empty list
+`[nums[0]]` if nums is an empty list
 
 
 ## Homework Assignment
